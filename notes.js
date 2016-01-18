@@ -131,7 +131,12 @@ In the example above the controller function sets myData.switch to 3. That means
 
 
 
+Depends on your use case but to summarise the difference:
 
+ng-if will remove elements from DOM. This means that all your handlers or anything else attached to those elements will be lost. For example, if you bound a click handler to one of child elements, when ng-if evaluates to false, that element will be removed from DOM and your click handler will not work any more, even after ng-if later evaluates to true and displays the element. You will need to reattach the handler.
+ng-show/ng-hide does not remove the elements from DOM. It uses CSS styles to hide/show elements (note: you might need to add your own classes). This way your handlers that were attached to children will not be lost.
+ng-if creates a child scope while ng-show/ng-hide does not
+Elements that are not in the DOM have less performance impact and your web app might appear to be faster when using ng-if compared to ng-show/ng-hide. In my experience, the difference is negligible. Animations are possible when using both ng-show/ng-hide and ng-if, with examples for both in the Angular documentation.
 
 
 

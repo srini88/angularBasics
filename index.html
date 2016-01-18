@@ -7,15 +7,12 @@
 </head>
 <body>
 
-<div ng-controller="myController" ng-switch on="valueIs">
-<div ng-controller="myController" ng-switch-when="1"> Value is 1</div>
-<div ng-controller="myController" ng-switch-when="2"> Value is 2</div>
-<div ng-controller="myController" ng-switch-default> Value is not 1 or 2</div>
-
+<div ng-controller="myController">
 
 <!-- prints Value is 1 -->
-
+<div ng-if="showIt">ng-if Show it</div>
 </div>
+
 
 </body>
 </html>

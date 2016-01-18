@@ -118,6 +118,17 @@ AngularJS can show or hide HTML depending on the state of data in the model. You
 
 
 
+The ng-switch directive is used if you want to add or remove HTML elements from the DOM based on data in the model. 
+
+
+This example contains a div element with an ng-switch attribute and an on attribute. The on attribute tells which data in the model to switch on.
+
+Inside the div element are three nested div elements. The first two nested div elements contains an ng-switch-when attribute. The value of this attribute tells what value the model data referenced in the on attribute of the parent div should have, for the nested div to be visible. In this example the first nested div is visible when myData.switch is 1, and the second nested div is visible when myData.switch is 2.
+
+The third nested div has an ng-switch-default attribute. If no of the other ng-switch-when directives are matched, then the div with the ng-switch-default attribute is shown.
+
+In the example above the controller function sets myData.switch to 3. That means that the nested div with the ng-switch-default attribute will be shown. The two other nested div elements will be removed from the DOM completely.
+
 
 
 

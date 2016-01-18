@@ -141,7 +141,15 @@ Elements that are not in the DOM have less performance impact and your web app m
 
 
 
+The ng-repeat directive defines a set of special variables which you can use when iterating the collection. These variables are:
 
+$index
+$first
+$middle
+$last
+The $index variable contains the index of the element being iterated.
+
+The $first, $middle and $last contain a boolean value depending on whether the current item is the first, middle or last element in the collection being iterated. An item is "middle" if it is not first nor last. You can use these variables to generate different HTML using e.g. the ng-show / ng-hide, ng-switch, ng-if and ng-include directives described earlier.
 
 
 

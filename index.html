@@ -9,13 +9,9 @@
 
 <div ng-controller="myController">
 
-<ul ng-repeat="(key, value) in arr1">
-	<li>{{key}} {{value}}</li>
+<ul ng-repeat="item in items | filter:itemFilter">
+	<li>{{item}}</li>
 </ul>
-
-<!-- 0 apple
-1 orange
-2 kiwi -->
 
 
 </div>

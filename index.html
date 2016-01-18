@@ -7,8 +7,26 @@
 </head>
 <body>
 
-<div ng-controller="myController">
-<h1>{{hello.greet}}</h1>
+<div ng-controller="myController" ng-show="hello.showIt">
+<h1>My nigga I;m seen </h1>
+
+
+
+<div ng-controller="myController" ng-hide="!hello.showIt">
+<h1>My nigga I;m seen </h1>
+
+
+<!-- This will insert the data in the hello.greet into the body of the h1 element. Notice how the {{ }} are not necessary around the expression inside the ng-bind attribute. -->
+
+
+
+<!-- One has an ng-show directive and the other has an ng-hide directive. Both directives look at the myData.showIt boolean variable to determine if they should show or hide the span element. The ng-show directive will show the element if the model value is true, and hide the element if the model value is false. The ng-hide directive will do the opposite: Hide the span element if the model value is true, and show it if the model value is false.
+
+Notice how the controller function sets the myData.showIt to true. This means that the example above will show the first span element and hide the second.
+ -->
+<!-- The HTML elements (span elements in this case) are hidden using the CSS property display: none;. That means, that the HTML elements are still present in the DOM. They are just not visible. -->
+
+
 </div>
 
 </body>

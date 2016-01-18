@@ -9,8 +9,15 @@
 
 <div ng-controller="myController">
 
-<!-- prints Value is 1 -->
-<div ng-include="'extDoc.html'"></div>
+<ul ng-repeat="(key, value) in arr1">
+	<li>{{key}} {{value}}</li>
+</ul>
+
+<!-- 0 apple
+1 orange
+2 kiwi -->
+
+
 </div>
 
 

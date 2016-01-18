@@ -10,9 +10,9 @@
 <div ng-controller="myController">
 
 <ul>
-	<li>{{today | date:'dd-MM-yyyy'}}</li> <!-- 18-01-2016 -->
-	<li>{{today | date:'dd-mm-yyyy'}}</li> <!-- 18-52-2016 --><!-- looks wrong use MM insted -->
-	<li>{{today}}</li> <!--"2016-01-18T07:53:06.195Z"-->
+<li>{{sample | myOwnFilter}}</li>
+
+<!-- my ownFilter addds motheryarr -->
 </ul>
 
 

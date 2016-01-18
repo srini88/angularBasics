@@ -153,3 +153,16 @@ The $first, $middle and $last contain a boolean value depending on whether the c
 
 
 
+
+The $scope object used by views in AngularJS are organized into a hierarchy. There is a root scope, and the root scope has one or more child scopes. Each view has its own $scope (which is a child of the root scope), so whatever variables one view controller sets on its $scope variable, those variables are invisible to other controllers.
+
+
+This example contains two views, each with their own controller function. Each controller sets the variable data.theVar to different values.
+
+When this example is executed, the $scope hierarchy will look like this:
+
+Root $scope
+$scope for myController 1
+$scope for myController 2
+As you can see, the $scope object used by the two controllers are not the same $scope object. That is also why the example above would write out two different values for the data bindings {{data.theVar}} inside the two views. The two controller functions for the views set different values for the data.theVar variable in each their own $scope object.
+
